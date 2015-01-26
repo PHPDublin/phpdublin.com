@@ -72,3 +72,10 @@
 .speaker .social {
     text-align: center;
 }
+
+#footer {
+    margin: 50px auto;
+    text-align: center;
+    max-width: 500px;
+    font-size: smaller;
+}
