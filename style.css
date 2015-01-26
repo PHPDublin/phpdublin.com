@@ -1,0 +1,74 @@
+#container {
+    background: transparent url('img/bg.png');
+    overflow: hidden;
+    margin: 5vh auto 20px auto;
+    max-width: 1200px;
+    padding: 50px;
+    box-shadow: 0 10px 30px #222;
+}
+
+#header a {
+    color: white;
+}
+
+#title {
+    position: relative;
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#title h1 {
+    font-size: 28px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+#title p {
+    margin: 0;
+}
+
+#title .social {
+    list-style: none;
+    float: right;
+}
+
+.brand {
+    display: block;
+}
+
+.brand img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+.rsvp {
+    display: block;
+}
+
+.rsvp img {
+    display: block;
+    max-width: 80%;
+    margin: 40px auto;
+}
+
+.sponsors a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.sponsor {
+    max-width: 90%;
+    margin: auto;
+}
+
+.speaker .avatar {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+.speaker .social {
+    text-align: center;
+}
