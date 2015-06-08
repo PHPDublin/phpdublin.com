@@ -1,3 +1,12 @@
+a, a:visited, a:hover, a:active, a:link {
+    color: #1a9ded;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: blue;
+}
+
 #container {
     background: transparent url('img/bg.png');
     overflow: hidden;
@@ -31,6 +40,54 @@
 #title .social {
     list-style: none;
     float: right;
+}
+
+#title .social a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 10px 15px 0 0;
+}
+
+#title .social .github {
+    background: white url('img/github128.png') no-repeat center center;
+    background-size: cover;
+}
+
+#title .social .twitter {
+    background: white url('img/twitter128.png') no-repeat center center;
+    background-size: cover;
+}
+
+#title .menu {
+    line-height: 50px;
+}
+
+#title .menu,
+#title .menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+#title .menu li a {
+    display: inline-block;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 10px;
+    font-weight: bolder;
+}
+
+#title .menu li.active a {
+    color: #222222;
+    background-color: #ededed;
+}
+
+#title .menu li.active a:active, a:hover {
+    background-color: #ededed;
 }
 
 .brand {
