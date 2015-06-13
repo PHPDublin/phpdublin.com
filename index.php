@@ -1,4 +1,4 @@
-?php $pageId = 'home'; ?>
+<?php $pageId = 'home'; ?>
 
 <?php include('templates/header.php'); ?>
 
