@@ -4,7 +4,7 @@
 
     <h1>Next Meetup</h1>
     <p><strong>What?</strong> <a href="http://www.meetup.com/PHP-Dublin/events/222870978/">PHP Dublin &mdash; June 2015</a></p>
-    <p><strong>When?</strong> June 17th 2015 @ 7:00pm</p>
+    <p><strong>When?</strong> June 23rd 2015 @ 7:00pm</p>
     <p><strong>Where?</strong>
         <a href="http://maps.google.com/maps?f=q&hl=en&q=Block+B%2C+Joyce%E2%80%99s+Court%2C+Joyce%E2%80%99s+Walk%2C+Talbot+Street%2C+Dublin%2C+ie" target="_blank">Kitman Labs Ltd, Block B, Joyce's Court, Joyce's Walk, Talbot Street, Dublin</a>
     </p>
