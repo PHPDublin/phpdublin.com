@@ -110,14 +110,25 @@ a, a:hover, a:active {
     margin: 40px auto;
 }
 
+.sponsors {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.sponsors h2 {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
 .sponsors a {
     display: block;
-    padding: 10px 20px;
 }
 
 .sponsor {
-    max-width: 90%;
-    margin: auto;
+    max-width: 100%;
+    margin: 10px auto;
 }
 
 .speaker .avatar {

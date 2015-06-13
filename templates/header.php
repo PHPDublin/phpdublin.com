@@ -13,12 +13,6 @@
 
     <body id="<?=$pageId ?>">
 
-        <!-- <header id="header" class="row" role="banner"> -->
-        <!--     <div class="pull-right social-icons"> -->
-        <!--         <a href="#"><i class="fa fa-twitter"></i> @PHPDublin</a> -->
-        <!--     </div> -->
-        <!-- </header> -->
-
         <div id="container">
 
             <div class="row" id="title">
@@ -30,8 +24,7 @@
                     <ul class="menu">
                         <li class="<?=$pageId === 'home' ? 'active' : 'inactive'; ?>"><a href="/">Next Meetup</a></li>
                         <li class="<?=$pageId === 'codeOfConduct' ? 'active' : 'inactive'; ?>"><a href="/code-of-conduct">Code of Conduct</a></li>
-                        <li class="<?=$pageId === 'sponsors' ? 'active' : 'inactive'; ?>"><a href="/sponsors">Sponsors</a></li>
-                        <li class="<?=$pageId === 'contact' ? 'active' : 'inactive'; ?>"><a href="/code-of-conduct">Contact</a></li>
+                        <li class="<?=$pageId === 'contact' ? 'active' : 'inactive'; ?>"><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2">
@@ -41,3 +34,18 @@
                     </p>
                 </div>
             </div>
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <a class="rsvp" href="http://www.meetup.com/PHP-Dublin/events/222870978/">
+                        <img src="img/rsvp-meetup.png" alt="RSVP on meetup.com" />
+                    </a>
+                </div>
+
+                <div class="col-md-9">
+
+                    <div class="content">
+
+                        <div class="row">
+                            <div class="col-md-8">

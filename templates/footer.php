@@ -1,3 +1,25 @@
+                            </div>
+                            <div class="col-md-4">
+                                <a class="brand" href="index.html">
+                                    <img src="img/logo.png" alt="PHPDublin" />
+                                </a>
+
+                                <div class="sponsors">
+                                    <h2>Sponsors</h2>
+                                    <p>
+                                        <a href="http://kitmanlabs.com/"><img class="sponsor sponsor-kitman" src="img/sponsor-kitman.png" alt="Kitman Labs" /></a>
+                                        <a href="http://hostelworld.com/"><img class="sponsor sponsor-engine-yard" src="img/sponsor-hostelworld.png" alt="Hostelworld" /></a>
+                                        <a href="http://statcounter.com/"><img class="sponsor sponsor-statcounter" src="img/sponsor-statcounter.png" alt="StatCounter" /></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- /content -->
+
+                </div> <!-- /col-md-9 -->
+
+            </div> <!-- /row -->
         </div>
 
         <div id="footer">
