@@ -1,4 +1,4 @@
-<?php $pageId = 'home'; ?>
+?php $pageId = 'home'; ?>
 
 <?php include('templates/header.php'); ?>
 
@@ -24,7 +24,7 @@
     <h3>I wanna talk!</h3>
     <p>Great! We'd love to hear from you. If you have a talk you would like to give, please <a href="/contact">send us details</a>. Don't be shy.</p>
 
-    <h3>Doors open 6.45pm - Presentations start at 7pm</h3>
+    <h3>Doors open 7pm</h3>
 
 <?php include('templates/footer.php'); ?>
 
