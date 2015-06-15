@@ -1,6 +1,6 @@
                             </div>
                             <div class="col-md-4">
-                                <a class="brand" href="index.html">
+                                <a class="brand" href="/">
                                     <img src="img/logo.png" alt="PHPDublin" />
                                 </a>
 
