@@ -19,7 +19,8 @@
     <p>Thanks to <a href="http://kitmanlabs.com">Kitman Labs</a> (<a href="http://careers.kitmanlabs.com">they're hiring</a> !) we've got a new city-centre venue on Joyce’s Walk, just off Talbot Street.</p>
 
     <h3>I wanna talk!</h3>
-    <p>Great! We'd love to hear from you. If you have a talk you would like to give, please <a href="/contact">send us details</a>. Don't be shy.</p>
+    <p>Great! We'd love to hear from you. If you have a talk you would like to give, please <a href="/contact">send us details</a>. Don't be shy!</p>
+    <p>In fact, if you need a template for your talk, feel free to <a href="./templates/PHPDublinSlideTemplate.otp">use ours</a>!</p>
 
     <h3>Doors open 7pm</h3>
 
