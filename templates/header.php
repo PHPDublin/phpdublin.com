@@ -38,7 +38,7 @@
             <div class="row">
 
                 <div class="col-md-3">
-                    <a class="rsvp" href="http://www.meetup.com/PHP-Dublin/events/222870978/">
+                    <a class="rsvp" href="<?php echo $meetupUrl;?>">
                         <img src="img/rsvp-meetup.png" alt="RSVP on meetup.com" />
                     </a>
                 </div>
