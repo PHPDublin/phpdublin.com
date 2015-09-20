@@ -2,18 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use View;
 
 class SiteController extends Controller
 {
-    public function __construct(Request $request)
-    {
-        view()->share('page_id', $request->path());
-        view()->share('meetup_url', 'http://www.meetup.com/PHP-Dublin/events/224450191/');
-    }
-    
     public function home()
     {
         return View::make('home');

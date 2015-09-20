@@ -12,7 +12,7 @@ class Post
     private $date;
     private $content;
 
-    public function __construct(UUID $id, String\NonBlank $title, String\NonBlank $author, Date $date, String\NonBlank $content)
+    public function __construct(UUID $id, String\NonBlank $title, String\NonBlank $author, Date\Past $date, String\NonBlank $content)
     {
         $this->id = $id;
         $this->title = $title;

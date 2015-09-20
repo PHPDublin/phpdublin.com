@@ -7,7 +7,10 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "league/commonmark": "^0.10.0"
+        "league/commonmark": "^0.10.0",
+        "league/flysystem": "^1.0",
+        "ramsey/uuid": "~2.8",
+        "nesbot/carbon": "~1.14"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

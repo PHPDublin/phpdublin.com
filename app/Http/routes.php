@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'SiteController@home');
+Route::get('/blog', 'BlogController@all');
 Route::get('/code-of-conduct', 'SiteController@code_of_conduct');
 Route::get('/contact-us', 'SiteController@contact_us');

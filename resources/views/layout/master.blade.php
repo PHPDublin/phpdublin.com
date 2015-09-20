@@ -16,13 +16,20 @@
         <div id="container">
 
             <div class="row" id="title">
+                <div class="col-xs-1">
+                    <a  href="/">
+                        <img class="img img-responsive" src="img/logo-sm.png" alt="PHPDublin" />
+                    </a>
+                </div>
                 <div class="col-md-3">
                     <h1>PHPDublin</h1>
                     <p class="intro">Dublin's PHP Community Meetup</p>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <ul class="menu">
                         <li class="<?=$page_id === 'home' ? 'active' : 'inactive'; ?>"><a href="/">Next Meetup</a></li>
+                        <li class="<?=$page_id === 'blog' ? 'active' : 'inactive'; ?>"><a href="/blog">Blog</a></li>
+                
                         <li class="<?=$page_id === 'code-of-conduct' ? 'active' : 'inactive'; ?>"><a href="/code-of-conduct">Code of Conduct</a></li>
                         <li class="<?=$page_id === 'contact-us' ? 'active' : 'inactive'; ?>"><a href="/contact-us">Contact</a></li>
                     </ul>
@@ -37,13 +44,7 @@
 
             <div class="row">
 
-                <div class="col-md-3">
-                    <a class="rsvp" href="<?php echo $meetup_url;?>">
-                        <img src="img/rsvp-meetup.png" alt="RSVP on meetup.com" />
-                    </a>
-                </div>
-
-                <div class="col-md-9">
+                <div class="col-md-12">
 
                     <div class="content">
 
@@ -52,10 +53,9 @@
                                 @yield('content')
                             </div>
                             <div class="col-md-4">
-                                <a class="brand" href="/">
-                                    <img src="img/logo.png" alt="PHPDublin" />
+                                <a class="rsvp" href="<?php echo $meetup_url;?>">
+                                    <img src="img/rsvp-meetup.png" alt="RSVP on meetup.com" />
                                 </a>
-
                                 <div class="sponsors">
                                     <h2>Sponsors</h2>
                                     <p>

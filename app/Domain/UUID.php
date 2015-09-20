@@ -2,7 +2,24 @@
 
 namespace App\Domain\ValueObject;
 
-class UUID extends \UUID
+use Rhumsaa\Uuid\Uuid as RhumsaaUUID;
+
+class UUID
 {
+    private $id;
     
+    public function __construct($id)
+    {
+        $this->id = RhumsaaUUID::fromString($id);
+    }
+    
+    public function value()
+    {
+        return $this->id->toString();
+    }
+    
+    public function __toString()
+    {
+        return $this->value();
+    }
 }

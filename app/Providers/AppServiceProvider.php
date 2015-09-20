@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(
+                \App\Domain\Repo\PostRepo::class, 
+                \App\Infrastructure\Domain\Repo\PostRepo\FileSystem::class
+        );
     }
 }

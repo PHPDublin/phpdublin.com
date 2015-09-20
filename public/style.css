@@ -1,19 +1,24 @@
+
+body {
+    background: #199CEC;
+}
+
 a, a:visited, a:hover, a:active, a:link {
     color: #1a9ded;
 }
 
 a, a:hover, a:active {
     text-decoration: none;
-    color: blue;
+    color: #1a9ded;
 }
 
 #container {
-    background: url('img/bg.png');
+    background: #FFFFFF;
     overflow: hidden;
     margin: 5vh auto 20px auto;
     max-width: 1200px;
     padding: 50px;
-    box-shadow: 0 10px 30px #222;
+    box-shadow: 0 10px 20px #444;
 }
 
 #header a {
@@ -22,8 +27,9 @@ a, a:hover, a:active {
 
 #title {
     position: relative;
-    background: white;
+    background: #FFFFFF;
     padding: 10px;
+    box-shadow: 0 1px 7px #BBBBBB;
     margin-bottom: 20px;
 }
 
@@ -107,7 +113,7 @@ a, a:hover, a:active {
 .rsvp img {
     display: block;
     max-width: 80%;
-    margin: 40px auto;
+    margin: 10px auto;
 }
 
 .sponsors {
