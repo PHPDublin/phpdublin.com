@@ -2,10 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Dublin's PHP Community Meetup</title>
-
+        <title>Dublin's PHP Community</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
         <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -23,7 +25,7 @@
                 </div>
                 <div class="col-md-3">
                     <h1>PHPDublin</h1>
-                    <p class="intro">Dublin's PHP Community Meetup</p>
+                    <p class="intro">Dublin's PHP Community</p>
                 </div>
                 <div class="col-md-6">
                     <ul class="menu">
@@ -49,10 +51,10 @@
                     <div class="content">
 
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-9">
                                 @yield('content')
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <a class="rsvp" href="<?php echo $meetup_url;?>">
                                     <img src="img/rsvp-meetup.png" alt="RSVP on meetup.com" />
                                 </a>

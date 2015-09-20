@@ -80,8 +80,7 @@ a, a:hover, a:active {
 
 #title .menu li a {
     display: inline-block;
-    border: 1px solid silver;
-    border-radius: 5px;
+    border-bottom: 5px solid #ededed;
     padding: 0 15px;
     margin-right: 10px;
     font-weight: bolder;
@@ -113,7 +112,7 @@ a, a:hover, a:active {
 .rsvp img {
     display: block;
     max-width: 80%;
-    margin: 10px auto;
+    margin: 10px auto 20px;
 }
 
 .sponsors {
@@ -152,4 +151,18 @@ a, a:hover, a:active {
     text-align: center;
     max-width: 500px;
     font-size: smaller;
+}
+
+#footer a {
+    color: #ffffff;
+}
+
+.github-avatar {
+    float: left;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.author {
+    line-height: 2em;
 }
