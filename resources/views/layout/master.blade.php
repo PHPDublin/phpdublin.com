@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Dublin's PHP Community</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/style.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         
@@ -20,7 +20,7 @@
             <div class="row" id="title">
                 <div class="col-xs-1">
                     <a  href="/">
-                        <img class="img img-responsive" src="img/logo-sm.png" alt="PHPDublin" />
+                        <img class="img img-responsive" src="/img/logo-sm.png" alt="PHPDublin" />
                     </a>
                 </div>
                 <div class="col-md-3">
@@ -56,14 +56,14 @@
                             </div>
                             <div class="col-md-3">
                                 <a class="rsvp" href="<?php echo $meetup_url;?>">
-                                    <img src="img/rsvp-meetup.png" alt="RSVP on meetup.com" />
+                                    <img src="/img/rsvp-meetup.png" alt="RSVP on meetup.com" />
                                 </a>
                                 <div class="sponsors">
                                     <h2>Sponsors</h2>
                                     <p>
-                                        <a href="http://kitmanlabs.com/"><img class="sponsor sponsor-kitman" src="img/sponsor-kitman.png" alt="Kitman Labs" /></a>
-                                        <a href="http://hostelworld.com/"><img class="sponsor sponsor-engine-yard" src="img/sponsor-hostelworld.png" alt="Hostelworld" /></a>
-                                        <a href="http://statcounter.com/"><img class="sponsor sponsor-statcounter" src="img/sponsor-statcounter.png" alt="StatCounter" /></a>
+                                        <a href="http://kitmanlabs.com/"><img class="sponsor sponsor-kitman" src="/img/sponsor-kitman.png" alt="Kitman Labs" /></a>
+                                        <a href="http://hostelworld.com/"><img class="sponsor sponsor-engine-yard" src="/img/sponsor-hostelworld.png" alt="Hostelworld" /></a>
+                                        <a href="http://statcounter.com/"><img class="sponsor sponsor-statcounter" src="/img/sponsor-statcounter.png" alt="StatCounter" /></a>
                                     </p>
                                 </div>
                             </div>
@@ -82,4 +82,23 @@
         </div>
 
     </body>
+    
+<script type="text/javascript">
+
+$(function(){
+    $(".github-avatar").each(fetchAvatar);
+});
+
+function fetchAvatar()
+{
+    var $this = $(this);
+    var username = $this.attr("data-github-username");
+    $.get("https://api.github.com/users/"+username, function(githubUserData) {
+        $this.attr('src', githubUserData.avatar_url);
+        $this.show();
+    });
+}
+
+</script>
+    
 </html>

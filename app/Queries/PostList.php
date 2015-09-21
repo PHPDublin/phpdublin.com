@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Commands;
+namespace App\Queries;
 
 use Illuminate\Contracts\Bus\SelfHandling;
 use App\Domain\Repo\PostRepo;
 use App\Domain\ValueObject\Post;
 
-class PostList extends Command implements SelfHandling
+class PostList extends Query implements SelfHandling
 {
     /**
      * @return void

@@ -23,7 +23,7 @@ class FileSystem implements \App\Domain\Repo\PostRepo
         $posts = [];
         foreach($post_folders as $folder) {
             $id = new ValueObject\UUID($folder['path']);
-            $posts[] = $this->load_post($id);
+            $posts[] = $this->fetch($id);
         }
         
         usort($posts, function(ValueObject\Post $post_a, ValueObject\Post $post_b){
@@ -40,7 +40,11 @@ class FileSystem implements \App\Domain\Repo\PostRepo
         return array_pop($posts);
     }
     
-    private function load_post(ValueObject\UUID $id)
+    /**
+     * @param \App\Domain\ValueObject\UUID $id
+     * @return \App\Domain\ValueObject\Post
+     */
+    public function fetch(ValueObject\UUID $id)
     {
         $details = FileSystem\Details::fromStdClass(
             json_decode($this->filesystem->read($this->details_filename($id)))

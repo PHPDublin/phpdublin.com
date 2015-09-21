@@ -166,3 +166,11 @@ a, a:hover, a:active {
 .author {
     line-height: 2em;
 }
+
+.blog-content {
+    margin-top: 15px;
+}
+
+a h2 {
+    color: #000;
+}

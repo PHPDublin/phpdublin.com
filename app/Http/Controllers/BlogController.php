@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use View;
 use League\CommonMark;
+use App\Queries;
 
 class BlogController extends Controller
 {
@@ -18,16 +19,16 @@ class BlogController extends Controller
     
     public function all()
     {
-        $query = new \App\Commands\PostList();
+        $query = new Queries\PostList();
         $posts = $this->dispatch($query); 
         return View::make('blog', ['posts'=>$posts, 'renderer'=>$this->markdown_renderer]);
     }
     
     public function post($id)
     {
-        $query = new \App\Commands\PostLatest();
-        $post = $query->handle();
+        $query = new Queries\Post( new \App\Domain\ValueObject\UUID($id) );
+        $post = $this->dispatch($query); 
         
-        return View::make('blog', ['post'=>$post, 'renderer'=>$this->markdown_renderer]);
+        return View::make('post', ['post'=>$post, 'renderer'=>$this->markdown_renderer]);
     }
 }
