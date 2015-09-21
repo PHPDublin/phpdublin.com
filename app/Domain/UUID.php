@@ -13,6 +13,11 @@ class UUID
         $this->id = RhumsaaUUID::fromString($id);
     }
     
+    public static function make()
+    {
+        return new self(RhumsaaUUID::uuid4()->toString());
+    }
+    
     public function value()
     {
         return $this->id->toString();

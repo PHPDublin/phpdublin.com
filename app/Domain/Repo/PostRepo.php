@@ -11,5 +11,7 @@ interface PostRepo
     
     /** @return Post[] */
     public function all();
+    
+    public function store(Post $post);
 }
 
