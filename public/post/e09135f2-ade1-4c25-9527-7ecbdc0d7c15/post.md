@@ -1,5 +1,20 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This is the first in a series of guest articles that have been written by the community.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Our first article is from <a href="https://github.com/conorsmith" target="__blank">Conor Smith</a>, one of our meetup attendees.
+
+Conor gives us a hands on demonstration of how to use PHP 5.5's generators to write better command line applications. 
+
+```php
+function someGenerator()
+{
+  yield "first value";
+  yield "second value";
+}
+```
+
+If you've ever written a long running console command, you know how hard it is to keep the display logic out of the domain logic, well Conor shows us exactly how to do this.
+
+<h4>
+<a target="__blank" href="http://blog.conorsmith.ie/console-output-with-generators/">Click here to visit his article.</a>
+</h4>
