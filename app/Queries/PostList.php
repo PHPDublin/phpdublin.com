@@ -9,14 +9,6 @@ use App\Domain\ValueObject\Post;
 class PostList extends Query implements SelfHandling
 {
     /**
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
      * @return Post[]
      */
     public function handle(PostRepo $post_repo)
