@@ -9,10 +9,10 @@ class NonBlank
     public function __construct($value)
     {
         if (!is_string($value)) {
-            return new \Exception("Passed value is not a string");
+            throw new \Exception("Passed value is not a string");
         }
         if (strlen(trim($value)) == 0) {
-            return new \Exception("The string value cannot be blank, or just whitespace");
+            throw new \Exception("The string value cannot be blank, or just whitespace");
         }
        
         $this->value = $value;
