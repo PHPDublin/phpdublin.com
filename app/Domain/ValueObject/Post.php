@@ -14,7 +14,7 @@ class Post
 
     public static function make(UUID $id, String\NonBlank $title, String\NonBlank $author)
     {
-        $date = Date\Past::create();
+        $date = Date\Past::now();
         $content = new String\NonBlank("Add your content here");
         $post = new Post($id, $title, $author, $date, $content);
         
