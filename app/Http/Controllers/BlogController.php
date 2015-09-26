@@ -20,6 +20,6 @@ class BlogController extends Controller
         $query = new Queries\Post( new \App\Domain\ValueObject\UUID($id) );
         $post = $this->dispatch($query);
 
-        return View::make('post', ['post' => $post, 'renderer' => $this->markdown_renderer]);
+        return View::make('post', ['article' => $post, 'renderer' => $this->markdown_renderer]);
     }
 }
