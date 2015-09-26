@@ -141,7 +141,7 @@ body {
 .page-left {
     position: relative;
     padding-top: 40px;
-    top: 100px;
+    padding-bottom: 40px;
 
     a {
         color: $text-color;
@@ -195,6 +195,10 @@ body {
 }
 
 @media (min-width: 768px) {
+    .page-left {
+        top: 100px;
+    }
+
     #navbar {
         position: relative;
         .navbar-nav:not(.navbar-right) {
@@ -203,7 +207,6 @@ body {
             top: 25px;
             left: 190px;
         }
-
     }
 
     .navbar-default > .container .navbar-nav li.active a {
@@ -213,6 +216,13 @@ body {
         padding-bottom: 10px;
     }
 
+    .navbar-nav li a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media(min-width: 992px) {
     .navbar-default > .container .navbar-brand {
         position: absolute;
         width: 180px;
@@ -231,10 +241,5 @@ body {
         width: 180px;
         margin: 0 30px;
         text-align: center;
-    }
-
-    .navbar-nav li a {
-        padding-top: 20px;
-        padding-bottom: 20px;
     }
 }

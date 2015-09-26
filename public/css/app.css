@@ -6082,7 +6082,7 @@ body {
 .page-left {
   position: relative;
   padding-top: 40px;
-  top: 100px; }
+  padding-bottom: 40px; }
   .page-left a {
     color: #333333;
     text-decoration: none; }
@@ -6113,6 +6113,8 @@ body {
         font-size: large; }
 
 @media (min-width: 768px) {
+  .page-left {
+    top: 100px; }
   #navbar {
     position: relative; }
     #navbar .navbar-nav:not(.navbar-right) {
@@ -6125,6 +6127,11 @@ body {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     padding-bottom: 10px; }
+  .navbar-nav li a {
+    padding-top: 20px;
+    padding-bottom: 20px; } }
+
+@media (min-width: 992px) {
   .navbar-default > .container .navbar-brand {
     position: absolute;
     width: 180px;
@@ -6140,9 +6147,6 @@ body {
     display: block;
     width: 180px;
     margin: 0 30px;
-    text-align: center; }
-  .navbar-nav li a {
-    padding-top: 20px;
-    padding-bottom: 20px; } }
+    text-align: center; } }
 
 /*# sourceMappingURL=app.css.map */
