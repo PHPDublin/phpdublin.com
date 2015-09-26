@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'SiteController@home');
-Route::get('/blog', 'BlogController@all');
-Route::get('/blog/post/{id}/{title}', 'BlogController@post');
-Route::get('/code-of-conduct', 'SiteController@code_of_conduct');
-Route::get('/contact-us', 'SiteController@contact_us');
+Route::get('/'                       , ['as' => 'home'                 , 'uses' => 'SiteController@home']);
+Route::get('/blog'                   , ['as' => 'blog.index'           , 'uses' => 'BlogController@all']);
+Route::get('/blog/post/{id}/{title}' , ['as' => 'blog.show'            , 'uses' => 'BlogController@post']);
+Route::get('/code-of-conduct'        , ['as' => 'page.code-of-conduct' , 'uses' => 'SiteController@code_of_conduct']);
+Route::get('/contact-us'             , ['as' => 'page.contact-us'      , 'uses' => 'SiteController@contact_us']);
