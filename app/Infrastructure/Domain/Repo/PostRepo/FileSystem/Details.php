@@ -7,7 +7,7 @@ class Details
     public $title;
     public $author;
     public $date;
-    
+
     public static function fromStdClass($std_class)
     {
         $details = new Details();
@@ -19,8 +19,8 @@ class Details
         }
         return $details;
     }
-    
-    public static function make(\App\Domain\ValueObject\Post $post)
+
+    public static function make(\App\Domain\Interfaces\PublishableItem $post)
     {
         $details = new Details();
         $details->title = $post->title()->value();
@@ -28,9 +28,9 @@ class Details
         $details->date = $post->date()->format("Y-m-d");
         return $details;
     }
-    
+
     private function __construct()
     {
-        
+
     }
 }

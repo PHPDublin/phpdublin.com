@@ -16,3 +16,8 @@ Route::get('/blog', 'BlogController@all');
 Route::get('/blog/post/{id}/{title}', 'BlogController@post');
 Route::get('/code-of-conduct', 'SiteController@code_of_conduct');
 Route::get('/contact-us', 'SiteController@contact_us');
+
+Route::group(['prefix' => 'meetups'], function() {
+    Route::get('/'            , ['as' => 'meetups.index' , 'uses' => 'MeetupController@index']);
+    Route::get('{id}/{title}' , ['as' => 'meetups.show'  , 'uses' => 'MeetupController@show']);
+});

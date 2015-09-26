@@ -3,8 +3,9 @@
 namespace App\Domain\ValueObject;
 
 use App\Domain\ValueObject\String;
+use App\Domain\Interfaces\PublishableItem;
 
-class Post
+class Post implements PublishableItem
 {
     private $id;
     private $title;
@@ -17,10 +18,10 @@ class Post
         $date = Date\Past::now();
         $content = new String\NonBlank("Add your content here");
         $post = new Post($id, $title, $author, $date, $content);
-        
+
         return $post;
     }
-    
+
     public function __construct(UUID $id, String\NonBlank $title, String\NonBlank $author, Date\Past $date, String\NonBlank $content)
     {
         $this->id = $id;
@@ -29,7 +30,7 @@ class Post
         $this->date = $date;
         $this->content = $content;
     }
-    
+
     function id()
     {
         return $this->id;

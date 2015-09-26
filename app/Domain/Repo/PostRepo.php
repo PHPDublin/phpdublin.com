@@ -2,6 +2,7 @@
 
 namespace App\Domain\Repo;
 
+use App\Domain\Interfaces;
 use App\Domain\ValueObject\Post;
 use App\Domain\ValueObject\UUID;
 
@@ -13,7 +14,7 @@ interface PostRepo
     /** @return Post[] */
     public function all();
     
-    public function store(Post $post);
+    public function store(Interfaces\PublishableItem $post);
     
     public function fetch(UUID $id);
 }
