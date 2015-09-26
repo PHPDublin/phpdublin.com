@@ -12,7 +12,12 @@
 */
 
 Route::get('/'                       , ['as' => 'home'                 , 'uses' => 'SiteController@home']);
-Route::get('/blog'                   , ['as' => 'blog.index'           , 'uses' => 'BlogController@all']);
-Route::get('/blog/post/{id}/{title}' , ['as' => 'blog.show'            , 'uses' => 'BlogController@post']);
-Route::get('/code-of-conduct'        , ['as' => 'page.code-of-conduct' , 'uses' => 'SiteController@code_of_conduct']);
-Route::get('/contact-us'             , ['as' => 'page.contact-us'      , 'uses' => 'SiteController@contact_us']);
+Route::get('code-of-conduct'        , ['as' => 'page.code-of-conduct' , 'uses' => 'SiteController@code_of_conduct']);
+Route::get('contact-us'             , ['as' => 'page.contact-us'      , 'uses' => 'SiteController@contact_us']);
+
+Route::group(['prefix' => 'blog'], function() {
+    Route::get('/'                 , ['as' => 'blog.index'      , 'uses' => 'BlogController@index']);
+    Route::get('post/{id}/{title}' , ['as' => 'blog.show'       , 'uses' => 'BlogController@show']);
+    Route::get('contribute'        , ['as' => 'blog.contribute' , 'uses' => 'BlogController@index']);
+    Route::get('about'             , ['as' => 'blog.about'      , 'uses' => 'BlogController@index']);
+});

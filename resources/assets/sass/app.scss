@@ -2,7 +2,7 @@
 @import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
 body {
-    background: white;
+    background: $blue;
 }
 
 .well {
@@ -98,19 +98,6 @@ body {
     }
 }
 
-.left-side {
-    background-color: $blue;
-    position: relative;
-    padding-top: 40px;
-    top: -20px;
-
-    h1 {
-        font-size: 25px;
-        color: $blue;
-        margin: 0 0 10px;
-    }
-}
-
 .item-blog {
     &:not(:last-child) {
         border-bottom: 3px solid $blue;
@@ -140,7 +127,112 @@ body {
     }
 }
 
+.page-content {
+    background: white;
+    margin: 5px 0;
+    padding: 10px 30px 30px;
+}
+
+.sponsor {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.page-left {
+    position: relative;
+    padding-top: 40px;
+    top: 100px;
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+            color: #fff
+        }
+    }
+
+    .nav a:hover {
+        color: inherit;
+    }
+
+
+    h1 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+    }
+
+    .item-blog {
+        border-color: lighten($blue, 30%);
+
+        .side {
+            width: 100%;
+            line-height: normal;
+            text-align: left;
+            padding: 0 16px;
+            img {
+                display: none !important;
+            }
+        }
+
+        .main-content {
+            width: 100%;
+
+            p {
+                display: none;
+            }
+
+            .read-more {
+                display: none;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: large;
+            }
+        }
+    }
+}
+
 @media (min-width: 768px) {
+    #navbar {
+        position: relative;
+        .navbar-nav:not(.navbar-right) {
+            position: absolute;
+            float: none;
+            top: 25px;
+            left: 190px;
+        }
+
+    }
+
+    .navbar-default > .container .navbar-nav li.active a {
+        border-radius: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-default > .container .navbar-brand {
+        position: absolute;
+        width: 180px;
+        border: 5px solid #0F60A8;
+        margin: 30px;
+        border-radius: 500px;
+        height: 180px;
+        background-position: center 16px;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    .navbar-default .byline {
+        top: 145px;
+        text-indent: 0;
+        display: block;
+        width: 180px;
+        margin: 0 30px;
+        text-align: center;
+    }
+
     .navbar-nav li a {
         padding-top: 20px;
         padding-bottom: 20px;

@@ -36,9 +36,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="<?=$page_id === 'home' ? 'active' : 'inactive'; ?>"><a href="/">Next Meetup</a></li>
+            <li class="<?=$page_id === '/' ? 'active' : 'inactive'; ?>"><a href="/">Next Meetup</a></li>
             <li class="<?=$page_id === 'blog' ? 'active' : 'inactive'; ?>"><a href="/blog">Blog</a></li>
-    
+
             <li class="<?=$page_id === 'code-of-conduct' ? 'active' : 'inactive'; ?>"><a href="/code-of-conduct">Code of Conduct</a></li>
             <li class="<?=$page_id === 'contact-us' ? 'active' : 'inactive'; ?>"><a href="/contact-us">Contact</a></li>
           </ul>

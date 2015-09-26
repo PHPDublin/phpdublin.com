@@ -5992,7 +5992,7 @@ button.close {
     display: none !important; } }
 
 body {
-  background: white; }
+  background: #199CEC; }
 
 .well h2 {
   margin-top: 0; }
@@ -6051,16 +6051,6 @@ body {
     font-size: 15px;
     padding-top: 3px; }
 
-.left-side {
-  background-color: #199CEC;
-  position: relative;
-  padding-top: 40px;
-  top: -20px; }
-  .left-side h1 {
-    font-size: 25px;
-    color: #199CEC;
-    margin: 0 0 10px; }
-
 .item-blog:not(:last-child) {
   border-bottom: 3px solid #199CEC;
   margin-bottom: 25px;
@@ -6080,7 +6070,77 @@ body {
 .item-blog h2 a {
   display: block; }
 
+.page-content {
+  background: white;
+  margin: 5px 0;
+  padding: 10px 30px 30px; }
+
+.sponsor {
+  max-width: 100%;
+  margin: 10px auto; }
+
+.page-left {
+  position: relative;
+  padding-top: 40px;
+  top: 100px; }
+  .page-left a {
+    color: #333333;
+    text-decoration: none; }
+    .page-left a:hover {
+      color: #fff; }
+  .page-left .nav a:hover {
+    color: inherit; }
+  .page-left h1 {
+    font-size: 24px;
+    margin: 20px 0 10px; }
+  .page-left .item-blog {
+    border-color: #a6d9f8; }
+    .page-left .item-blog .side {
+      width: 100%;
+      line-height: normal;
+      text-align: left;
+      padding: 0 16px; }
+      .page-left .item-blog .side img {
+        display: none !important; }
+    .page-left .item-blog .main-content {
+      width: 100%; }
+      .page-left .item-blog .main-content p {
+        display: none; }
+      .page-left .item-blog .main-content .read-more {
+        display: none; }
+      .page-left .item-blog .main-content h3 {
+        margin: 0;
+        font-size: large; }
+
 @media (min-width: 768px) {
+  #navbar {
+    position: relative; }
+    #navbar .navbar-nav:not(.navbar-right) {
+      position: absolute;
+      float: none;
+      top: 25px;
+      left: 190px; }
+  .navbar-default > .container .navbar-nav li.active a {
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-bottom: 10px; }
+  .navbar-default > .container .navbar-brand {
+    position: absolute;
+    width: 180px;
+    border: 5px solid #0F60A8;
+    margin: 30px;
+    border-radius: 500px;
+    height: 180px;
+    background-position: center 16px;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .navbar-default .byline {
+    top: 145px;
+    text-indent: 0;
+    display: block;
+    width: 180px;
+    margin: 0 30px;
+    text-align: center; }
   .navbar-nav li a {
     padding-top: 20px;
     padding-bottom: 20px; } }
