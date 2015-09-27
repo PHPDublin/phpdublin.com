@@ -11,8 +11,8 @@ class MeetupLatest extends Query implements SelfHandling
     /**
      * @return Meetup
      */
-    public function handle(MeetupRepo $post_repo)
+    public function handle(MeetupRepo $meetup_repo)
     {
-        return $post_repo->latest();
+        return $meetup_repo->latest();
     }
 }

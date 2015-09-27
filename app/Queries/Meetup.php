@@ -6,10 +6,10 @@ use Illuminate\Contracts\Bus\SelfHandling;
 use App\Domain\Repo\MeetupRepo;
 use App\Domain\ValueObject;
 
-class Meeup extends Query implements SelfHandling
+class Meetup extends Query implements SelfHandling
 {
     private $id;
-    
+
     public function __construct(ValueObject\UUID $id)
     {
         $this->id = $id;

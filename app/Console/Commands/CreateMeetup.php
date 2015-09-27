@@ -30,7 +30,7 @@ class CreateMeetup extends Command
     {
         parent::__construct();
     }
-    
+
     /**
      * Execute the console command.
      *
@@ -43,13 +43,13 @@ class CreateMeetup extends Command
                 $this->argument("title")
         );
         $author = new \App\Domain\ValueObject\String\NonBlank(
-            $this->argument("github_username")    
+            $this->argument("github_username")
         );
-        
+
         $meetup = \App\Domain\ValueObject\Meetup::make($id, $title, $author);
-        
+
         $dispatcher->dispatch( new \App\Commands\CreateMeetup($meetup));
-        
+
         $this->info("Meetup $id created.");
     }
 }

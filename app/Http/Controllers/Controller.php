@@ -7,14 +7,23 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
+use League\CommonMark;
+use App\Queries;
 
 abstract class Controller extends BaseController
 {
+    protected $markdown_renderer;
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    
+
     public function __construct(Request $request)
     {
+        $this->markdown_renderer = new CommonMark\CommonMarkConverter();
         view()->share('page_id', $request->path());
         view()->share('meetup_url', 'http://www.meetup.com/PHP-Dublin/events/225356604/');
+
+        $query = new Queries\BlogList();
+        $blogs = $this->dispatch($query);
+        return view()->share(['blogs' => $blogs, 'renderer' => $this->markdown_renderer]);
     }
 }

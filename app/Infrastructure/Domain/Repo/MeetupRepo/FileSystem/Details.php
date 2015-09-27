@@ -1,12 +1,17 @@
 <?php
 
-namespace App\Infrastructure\Domain\Repo\PostRepo\FileSystem;
+namespace App\Infrastructure\Domain\Repo\MeetupRepo\FileSystem;
 
 class Details
 {
     public $title;
     public $author;
     public $date;
+    public $time;
+    public $place;
+    public $map_link;
+    public $meetup_link;
+    public $sponsors;
 
     public static function fromStdClass($std_class)
     {
@@ -20,12 +25,12 @@ class Details
         return $details;
     }
 
-    public static function make(\App\Domain\ValueObject\Post $post)
+    public static function make(\App\Domain\ValueObject\Meetup $meetup)
     {
         $details = new Details();
-        $details->title = $post->title()->value();
-        $details->author = $post->author()->value();
-        $details->date = $post->date()->format("Y-m-d");
+        $details->title = $meetup->title()->value();
+        $details->author = $meetup->author()->value();
+        $details->date = $meetup->date()->format("Y-m-d");
         return $details;
     }
 

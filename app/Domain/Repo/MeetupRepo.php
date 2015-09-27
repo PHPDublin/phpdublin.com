@@ -10,12 +10,12 @@ interface MeetupRepo
 {
     /** @return Meetup */
     public function latest();
-    
+
     /** @return Meetup[] */
     public function all();
-    
+
     public function store(Interfaces\PublishableItem $post);
-    
+
     public function fetch(UUID $id);
 }
 

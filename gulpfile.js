@@ -1,4 +1,8 @@
-var elixir = require('laravel-elixir');
+var elixir      = require('laravel-elixir');
+var gulp        = require('gulp');
+var BrowserSync = require('laravel-elixir-browser-sync');
+
+require('laravel-elixir-imagemin');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +16,19 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass('app.scss')
+       .browserify('app.js')
+       .imagemin('./resources/assets/images', 'public/images')
+       .version(['css/app.css', 'js/app.js'])
+       .copy(
+            'node_modules/bootstrap-sass/assets/fonts/bootstrap',
+            'public/fonts/bootstrap'
+        )
+       .browserSync([
+           'app/**/*',
+           'public/**/*',
+           'resources/**/*'
+       ], {
+           proxy: 'phpdublin.local'
+       });
 });
