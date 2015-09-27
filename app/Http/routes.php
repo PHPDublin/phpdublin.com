@@ -11,8 +11,16 @@
 |
 */
 
-Route::get('/', 'SiteController@home');
-Route::get('/blog', 'BlogController@all');
-Route::get('/blog/post/{id}/{title}', 'BlogController@post');
-Route::get('/code-of-conduct', 'SiteController@code_of_conduct');
-Route::get('/contact-us', 'SiteController@contact_us');
+Route::get('/'                , ['as' => 'home'                 , 'uses' => 'MeetupController@index']);
+Route::get('/code-of-conduct' , ['as' => 'page.code-of-conduct' , 'uses' => 'SiteController@code_of_conduct']);
+Route::get('/contact-us'      , ['as' => 'page.contact-us'      , 'uses' => 'SiteController@contact_us']);
+
+Route::group(['prefix' => 'blog'], function() {
+    Route::get('/'            , ['as' => 'blog.index' , 'uses' => 'BlogController@index']);
+    Route::get('{id}/{title}' , ['as' => 'blog.show'  , 'uses' => 'BlogController@show']);
+});
+
+Route::group(['prefix' => 'meetup'], function() {
+    Route::get('/'            , ['as' => 'meetup.index' , 'uses' => 'MeetupController@index']);
+    Route::get('{id}/{title}' , ['as' => 'meetup.show'  , 'uses' => 'MeetupController@show']);
+});

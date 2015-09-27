@@ -4,31 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use View;
-use League\CommonMark;
 use App\Queries;
 
 class BlogController extends Controller
 {
-    private $markdown_renderer;
-    
-    public function __construct(\Illuminate\Http\Request $request)
+    public function index()
     {
-        parent::__construct($request);
-        $this->markdown_renderer = new CommonMark\CommonMarkConverter();    
+        $query = new Queries\BlogList();
+        $blogs = $this->dispatch($query);
+        return View::make('blog.index', ['blogs' => $blogs, 'renderer' => $this->markdown_renderer]);
     }
-    
-    public function all()
+
+    public function show($id)
     {
-        $query = new Queries\PostList();
-        $posts = $this->dispatch($query); 
-        return View::make('blog', ['posts'=>$posts, 'renderer'=>$this->markdown_renderer]);
-    }
-    
-    public function post($id)
-    {
-        $query = new Queries\Post( new \App\Domain\ValueObject\UUID($id) );
-        $post = $this->dispatch($query); 
-        
-        return View::make('post', ['post'=>$post, 'renderer'=>$this->markdown_renderer]);
+        $query = new Queries\Blog( new \App\Domain\ValueObject\UUID($id) );
+        $blog = $this->dispatch($query);
+
+        return View::make('blog.show', ['article' => $blog, 'renderer' => $this->markdown_renderer]);
     }
 }
