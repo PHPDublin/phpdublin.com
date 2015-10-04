@@ -4,7 +4,7 @@ out
 gen
 
 /nbproject/private/
-
+/workbench
 /vendor/*
 /node_modules
 Homestead.yaml

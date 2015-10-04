@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Bus\Dispatcher;
+use App\Domain\ValueObject;
 
 class CreateBlog extends Command
 {
@@ -38,18 +39,15 @@ class CreateBlog extends Command
      */
     public function handle(Dispatcher $dispatcher)
     {
-        $id = \App\Domain\ValueObject\UUID::make();
-        $title = new \App\Domain\ValueObject\String\NonBlank(
-                $this->argument("title")
-        );
-        $author = new \App\Domain\ValueObject\String\NonBlank(
+        $title = new ValueObject\PostTitle( $this->argument("title") );
+        $author = new ValueObject\String\NonBlank(
             $this->argument("github_username")
         );
 
-        $blog = \App\Domain\ValueObject\Blog::make($id, $title, $author);
+        $blog = ValueObject\Post::make($title->to_post_id(), $title, $author);
 
-        $dispatcher->dispatch( new \App\Commands\CreateBlog($blog));
+        $dispatcher->dispatch( new \App\Commands\CreatePost($blog) );
 
-        $this->info("Blog $id created.");
+        $this->info("Blog '".$title->to_post_id()."' created.");
     }
 }

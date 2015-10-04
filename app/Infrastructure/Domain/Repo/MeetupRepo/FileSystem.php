@@ -16,7 +16,7 @@ class FileSystem implements \App\Domain\Repo\MeetupRepo
 
     public function __construct()
     {
-        $adapter = new Local(storage_path('data/meetups'));
+        $adapter = new Local(storage_path('content/meetups'));
         $this->filesystem = new FlyFileSystem($adapter);
     }
 

@@ -10,7 +10,7 @@
         </div>
         <div class="col-sm-9">
             <h2>
-                <a href="{{ route('blog.show', [$article->id()->value(), $article->title()->slug()]) }}">
+                <a href="{{ route('blog.show', [$article->id()->value()]) }}">
                     {{ $article->title()->value() }}
                 </a>
             </h2>

@@ -4,7 +4,7 @@ namespace App\Domain\ValueObject;
 
 use Rhumsaa\Uuid\Uuid as RhumsaaUUID;
 
-class UUID
+class UUID implements ID
 {
     private $id;
     

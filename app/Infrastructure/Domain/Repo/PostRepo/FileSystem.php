@@ -1,26 +1,33 @@
 <?php
 
-namespace App\Infrastructure\Domain\Traits;
+namespace App\Infrastructure\Domain\Repo\PostRepo;
 
+use League\Flysystem\Filesystem as FlyFileSystem;
+use League\Flysystem\Adapter\Local;
 use App\Domain\ValueObject;
-use App\Domain\Interfaces;
-use App\Infrastructure\Domain\Repo\BlogRepo\FileSystem;
 
-trait CreatesMarkdownFiles
+class FileSystem implements \App\Domain\Repo\PostRepo
 {
+    private $filesystem;
 
+    public function __construct()
+    {
+        $adapter = new Local(storage_path('content/blogs'));
+        $this->filesystem = new FlyFileSystem($adapter);
+    }
+        
     public function all()
     {
         $blog_folders = $this->filesystem->listContents();
 
         $blogs = [];
         foreach($blog_folders as $folder) {
-            $id = new ValueObject\UUID($folder['path']);
+            $id = new ValueObject\PostID($folder['path']);
             $blogs[] = $this->fetch($id);
         }
 
-        usort($blogs, function(Interfaces\PublishableItem $blog_a, Interfaces\PublishableItem $blog_b){
-            return $blog_a->date()->lt($blog_b->date());
+        usort($blogs, function(ValueObject\Post $post_a, ValueObject\Post $post_b){
+            return $post_a->date()->lt($post_b->date());
         });
 
         return $blogs;
@@ -28,22 +35,22 @@ trait CreatesMarkdownFiles
 
     public function latest()
     {
-        $blogs = $this->all();
+        $posts = $this->all();
 
-        return array_pop($blogs);
+        return array_pop($posts);
     }
 
     /**
      * @param \App\Domain\ValueObject\UUID $id
      * @return \App\Domain\Interfaces\PublishableItem
      */
-    public function fetch(ValueObject\UUID $id)
+    public function fetch(ValueObject\PostID $id)
     {
         $details = FileSystem\Details::fromStdClass(
             json_decode($this->filesystem->read($this->details_filename($id)))
         );
 
-        $title  = new ValueObject\String\NonBlank($details->title);
+        $title  = new ValueObject\PostTitle($details->title);
         $author = new ValueObject\String\NonBlank($details->author);
         $date   = ValueObject\Date\Past::parse($details->date);
 
@@ -51,20 +58,20 @@ trait CreatesMarkdownFiles
             $this->filesystem->read($this->content_file($id))
         );
 
-        return new ValueObjectPostg($id, $title, $author, $date, $content);
+        return new ValueObject\Post($id, $title, $author, $date, $content);
     }
 
-    private function details_filename(ValueObject\UUID $id)
+    private function details_filename(ValueObject\PostID $id)
     {
         return $id."/details.json";
     }
 
-    private function content_file(ValueObject\UUID $id)
+    private function content_file(ValueObject\PostID $id)
     {
         return $id."/post.md";
     }
 
-    public function store(Interfaces\PublishableItem $blog)
+    public function store(ValueObject\Post $blog)
     {
         $details = FileSystem\Details::make($blog);
         $this->filesystem->write($this->details_filename($blog->id()), json_encode($details, JSON_PRETTY_PRINT));

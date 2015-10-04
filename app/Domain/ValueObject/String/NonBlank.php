@@ -22,9 +22,9 @@ class NonBlank
     {
         return $this->value;
     }
-
-    public function slug()
+    
+    public function __toString()
     {
-        return str_slug($this->value);
+        return $this->value;
     }
 }

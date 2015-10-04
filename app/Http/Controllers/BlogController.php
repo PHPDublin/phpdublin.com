@@ -17,7 +17,7 @@ class BlogController extends Controller
 
     public function show($id)
     {
-        $query = new Queries\Blog( new \App\Domain\ValueObject\UUID($id) );
+        $query = new Queries\Blog( new \App\Domain\ValueObject\PostID($id) );
         $blog = $this->dispatch($query);
 
         return View::make('blog.show', ['article' => $blog, 'renderer' => $this->markdown_renderer]);

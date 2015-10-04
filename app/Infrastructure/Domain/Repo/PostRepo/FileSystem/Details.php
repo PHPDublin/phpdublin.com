@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Infrastructure\Domain\Repo\BlogRepo\FileSystem;
+namespace App\Infrastructure\Domain\Repo\PostRepo\FileSystem;
+
+use App\Domain\ValueObject\Post;
 
 class Details
 {
@@ -20,7 +22,7 @@ class Details
         return $details;
     }
 
-    public static function make(\App\Domain\Interfaces\PublishableItem $blog)
+    public static function make(Post $blog)
     {
         $details = new Details();
         $details->title = $blog->title()->value();

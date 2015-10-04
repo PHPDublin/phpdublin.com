@@ -17,7 +17,7 @@ Route::get('/contact-us'      , ['as' => 'page.contact-us'      , 'uses' => 'Sit
 
 Route::group(['prefix' => 'blog'], function() {
     Route::get('/'            , ['as' => 'blog.index' , 'uses' => 'BlogController@index']);
-    Route::get('{id}/{title}' , ['as' => 'blog.show'  , 'uses' => 'BlogController@show']);
+    Route::get('{id}' , ['as' => 'blog.show'  , 'uses' => 'BlogController@show']);
 });
 
 Route::group(['prefix' => 'meetup'], function() {

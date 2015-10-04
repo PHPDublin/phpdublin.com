@@ -28,8 +28,8 @@ class AppServiceProvider extends ServiceProvider
                 \App\Infrastructure\Domain\Repo\MeetupRepo\FileSystem::class
         );
         $this->app->singleton(
-                \App\Domain\Repo\BlogRepo::class,
-                \App\Infrastructure\Domain\Repo\BlogRepo\FileSystem::class
+                \App\Domain\Repo\PostRepo::class,
+                \App\Infrastructure\Domain\Repo\PostRepo\FileSystem::class
         );
     }
 }

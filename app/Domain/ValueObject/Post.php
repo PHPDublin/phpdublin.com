@@ -3,9 +3,11 @@
 namespace App\Domain\ValueObject;
 
 use App\Domain\ValueObject\String;
-use App\Domain\Interfaces\PublishableItem;
+use App\Domain\ValueObject\PostID;
+use App\Domain\ValueObject\Date;
+use App\Domain\ValueObject\PostTitle;
 
-class Blog implements PublishableItem
+class Post
 {
     private $id;
     private $title;
@@ -13,16 +15,16 @@ class Blog implements PublishableItem
     private $date;
     private $content;
 
-    public static function make(UUID $id, String\NonBlank $title, String\NonBlank $author)
+    public static function make(PostID $id, PostTitle $title, String\NonBlank $author)
     {
         $date = Date\Past::now();
         $content = new String\NonBlank("Add your content here");
-        $blog = new Blog($id, $title, $author, $date, $content);
+        $blog = new Post($id, $title, $author, $date, $content);
 
         return $blog;
     }
 
-    public function __construct(UUID $id, String\NonBlank $title, String\NonBlank $author, Date\Past $date, String\NonBlank $content)
+    public function __construct(PostID $id, PostTitle $title, String\NonBlank $author, Date\Past $date, String\NonBlank $content)
     {
         $this->id = $id;
         $this->title = $title;

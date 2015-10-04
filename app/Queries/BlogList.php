@@ -3,15 +3,15 @@
 namespace App\Queries;
 
 use Illuminate\Contracts\Bus\SelfHandling;
-use App\Domain\Repo\BlogRepo;
-use App\Domain\ValueObject\Blog;
+use App\Domain\Repo\PostRepo;
+use App\Domain\ValueObject\Post;
 
 class BlogList extends Query implements SelfHandling
 {
     /**
-     * @return Blog[]
+     * @return Post[]
      */
-    public function handle(BlogRepo $blog_repo)
+    public function handle(PostRepo $blog_repo)
     {
         return $blog_repo->all();
     }
