@@ -16,5 +16,7 @@ interface PostRepo
     public function store(Post $blog);
 
     public function fetch(PostId $id);
+    
+    public function has(PostID $id);
 }
 

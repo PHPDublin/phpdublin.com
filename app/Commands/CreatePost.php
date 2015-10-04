@@ -4,18 +4,21 @@ namespace App\Commands;
 
 use Illuminate\Contracts\Bus\SelfHandling;
 use App\Domain\ValueObject\Post;
+use App\Domain\Repo\PostRepo;
+use App\Domain\Invariant\PostIdIsUnique;
 
 class CreatePost extends Command implements SelfHandling
 {
-    private $blog;
+    private $post;
 
-    public function __construct(Post $blog)
+    public function __construct(Post $post)
     {
-        $this->blog = $blog;
+        $this->post = $post;
     }
 
-    public function handle(\App\Domain\Repo\PostRepo $blog_repo)
+    public function handle(PostRepo $post_repo, PostIdIsUnique $post_id_is_uniue)
     {
-        $blog_repo->store($this->blog);
+        $post_id_is_uniue->assert($this->post->id());
+        $post_repo->store($this->post);
     }
 }

@@ -5,8 +5,9 @@ namespace App\Infrastructure\Domain\Repo\PostRepo;
 use League\Flysystem\Filesystem as FlyFileSystem;
 use League\Flysystem\Adapter\Local;
 use App\Domain\ValueObject;
+use App\Domain\Repo\PostRepo;
 
-class FileSystem implements \App\Domain\Repo\PostRepo
+class FileSystem implements PostRepo
 {
     private $filesystem;
 
@@ -38,6 +39,11 @@ class FileSystem implements \App\Domain\Repo\PostRepo
         $posts = $this->all();
 
         return array_pop($posts);
+    }
+    
+    public function has(ValueObject\PostID $id)
+    {
+        return $this->filesystem->has($this->details_filename($id));
     }
 
     /**
