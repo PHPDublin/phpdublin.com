@@ -6,21 +6,21 @@ use Illuminate\Console\Command;
 use Illuminate\Contracts\Bus\Dispatcher;
 use App\Domain\ValueObject;
 
-class CreateBlog extends Command
+class CreatePost extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'blog:make {title} {github_username}';
+    protected $signature = 'post:make {title} {github_username}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new blog blog';
+    protected $description = 'Create a new blog post';
 
     /**
      * Create a new command instance.
@@ -48,6 +48,6 @@ class CreateBlog extends Command
 
         $dispatcher->dispatch( new \App\Commands\CreatePost($blog) );
 
-        $this->info("Blog '".$title->to_post_id()."' created.");
+        $this->info("Blog post '".$title->to_post_id()."' created.");
     }
 }
