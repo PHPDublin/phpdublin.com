@@ -44,11 +44,11 @@ class Meetup implements PublishableItem
         String\NonBlank $author,
         Date\Past       $date,
         String\NonBlank $content,
-        String\ToTime   $time,
-        String\NonBlank $place,
-        String\NonBlank $map_link,
-        String\NonBlank $meetup_link,
-        ArrayValue\NonEmpty $sponsors
+        String\ToTime   $time = null,
+        String\NonBlank $place = null,
+        String\NonBlank $map_link = null,
+        String\NonBlank $meetup_link = null,
+        ArrayValue\NonEmpty $sponsors = null
     )
     {
         $this->id          = $id;

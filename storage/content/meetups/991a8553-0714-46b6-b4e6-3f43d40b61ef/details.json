@@ -1,0 +1,18 @@
+{
+    "title": "January 2016: Rasmus Lerdorf",
+    "author": "micflan",
+    "date": "2016-01-12",
+
+    "time": "January 12th 2016 7:00pm",
+    "place": "Gresham Hotel, O\'Connell Street, Dublin",
+    "map_link": "https://www.google.com/maps/place/The+Gresham+Hotel/@53.3517039,-6.2627294,17z/data=!3m1!4b1!4m2!3m1!1s0x48670e8690f70c1d:0x168b8a93c5deffe?hl=ena",
+    "meetup_link": "http://www.meetup.com/PHP-Dublin/events/227885595/",
+
+    "sponsors": [
+        {
+            "name": "Etsy Dublin",
+            "image": "/img/etsy.png",
+            "link": "http://etsy.com/"
+        }
+    ]
+}
