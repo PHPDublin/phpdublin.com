@@ -7,6 +7,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
+<<<<<<< HEAD
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Application Test Suite">
@@ -19,6 +20,18 @@
             <exclude>
                 <file>./app/Http/routes.php</file>
             </exclude>
+=======
+         stopOnFailure="false"
+         syntaxCheck="false">
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">app/</directory>
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
         </whitelist>
     </filter>
     <php>

@@ -1,6 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*!
+<<<<<<< HEAD
  * Bootstrap v3.3.6 (http://getbootstrap.com)
+=======
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under the MIT license
  */
@@ -12,13 +16,22 @@ if (typeof jQuery === 'undefined') {
 +function ($) {
   'use strict';
   var version = $.fn.jquery.split(' ')[0].split('.')
+<<<<<<< HEAD
   if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] > 2)) {
     throw new Error('Bootstrap\'s JavaScript requires jQuery version 1.9.1 or higher, but lower than version 3')
+=======
+  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1)) {
+    throw new Error('Bootstrap\'s JavaScript requires jQuery version 1.9.1 or higher')
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
   }
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: transition.js v3.3.6
+=======
+ * Bootstrap: transition.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#transitions
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -78,7 +91,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: alert.js v3.3.6
+=======
+ * Bootstrap: alert.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#alerts
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -97,7 +114,11 @@ if (typeof jQuery === 'undefined') {
     $(el).on('click', dismiss, this.close)
   }
 
+<<<<<<< HEAD
   Alert.VERSION = '3.3.6'
+=======
+  Alert.VERSION = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Alert.TRANSITION_DURATION = 150
 
@@ -173,7 +194,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: button.js v3.3.6
+=======
+ * Bootstrap: button.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#buttons
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -193,7 +218,11 @@ if (typeof jQuery === 'undefined') {
     this.isLoading = false
   }
 
+<<<<<<< HEAD
   Button.VERSION  = '3.3.6'
+=======
+  Button.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Button.DEFAULTS = {
     loadingText: 'loading...'
@@ -294,7 +323,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: carousel.js v3.3.6
+=======
+ * Bootstrap: carousel.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#carousel
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -325,7 +358,11 @@ if (typeof jQuery === 'undefined') {
       .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
   }
 
+<<<<<<< HEAD
   Carousel.VERSION  = '3.3.6'
+=======
+  Carousel.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Carousel.TRANSITION_DURATION = 600
 
@@ -532,7 +569,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: collapse.js v3.3.6
+=======
+ * Bootstrap: collapse.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#collapse
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -562,7 +603,11 @@ if (typeof jQuery === 'undefined') {
     if (this.options.toggle) this.toggle()
   }
 
+<<<<<<< HEAD
   Collapse.VERSION  = '3.3.6'
+=======
+  Collapse.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -744,7 +789,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: dropdown.js v3.3.6
+=======
+ * Bootstrap: dropdown.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -764,7 +813,11 @@ if (typeof jQuery === 'undefined') {
     $(element).on('click.bs.dropdown', this.toggle)
   }
 
+<<<<<<< HEAD
   Dropdown.VERSION = '3.3.6'
+=======
+  Dropdown.VERSION = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   function getParent($this) {
     var selector = $this.attr('data-target')
@@ -796,7 +849,11 @@ if (typeof jQuery === 'undefined') {
       if (e.isDefaultPrevented()) return
 
       $this.attr('aria-expanded', 'false')
+<<<<<<< HEAD
       $parent.removeClass('open').trigger($.Event('hidden.bs.dropdown', relatedTarget))
+=======
+      $parent.removeClass('open').trigger('hidden.bs.dropdown', relatedTarget)
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
     })
   }
 
@@ -830,7 +887,11 @@ if (typeof jQuery === 'undefined') {
 
       $parent
         .toggleClass('open')
+<<<<<<< HEAD
         .trigger($.Event('shown.bs.dropdown', relatedTarget))
+=======
+        .trigger('shown.bs.dropdown', relatedTarget)
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
     }
 
     return false
@@ -910,7 +971,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: modal.js v3.3.6
+=======
+ * Bootstrap: modal.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -944,7 +1009,11 @@ if (typeof jQuery === 'undefined') {
     }
   }
 
+<<<<<<< HEAD
   Modal.VERSION  = '3.3.6'
+=======
+  Modal.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -1248,7 +1317,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: tooltip.js v3.3.6
+=======
+ * Bootstrap: tooltip.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#tooltip
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ========================================================================
@@ -1275,7 +1348,11 @@ if (typeof jQuery === 'undefined') {
     this.init('tooltip', element, options)
   }
 
+<<<<<<< HEAD
   Tooltip.VERSION  = '3.3.6'
+=======
+  Tooltip.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Tooltip.TRANSITION_DURATION = 150
 
@@ -1763,7 +1840,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: popover.js v3.3.6
+=======
+ * Bootstrap: popover.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#popovers
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -1783,7 +1864,11 @@ if (typeof jQuery === 'undefined') {
 
   if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
 
+<<<<<<< HEAD
   Popover.VERSION  = '3.3.6'
+=======
+  Popover.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
     placement: 'right',
@@ -1872,7 +1957,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: scrollspy.js v3.3.6
+=======
+ * Bootstrap: scrollspy.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#scrollspy
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -1901,7 +1990,11 @@ if (typeof jQuery === 'undefined') {
     this.process()
   }
 
+<<<<<<< HEAD
   ScrollSpy.VERSION  = '3.3.6'
+=======
+  ScrollSpy.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   ScrollSpy.DEFAULTS = {
     offset: 10
@@ -2045,7 +2138,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: tab.js v3.3.6
+=======
+ * Bootstrap: tab.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#tabs
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -2065,7 +2162,11 @@ if (typeof jQuery === 'undefined') {
     // jscs:enable requireDollarBeforejQueryAssignment
   }
 
+<<<<<<< HEAD
   Tab.VERSION = '3.3.6'
+=======
+  Tab.VERSION = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Tab.TRANSITION_DURATION = 150
 
@@ -2201,7 +2302,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 /* ========================================================================
+<<<<<<< HEAD
  * Bootstrap: affix.js v3.3.6
+=======
+ * Bootstrap: affix.js v3.3.5
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
  * http://getbootstrap.com/javascript/#affix
  * ========================================================================
  * Copyright 2011-2015 Twitter, Inc.
@@ -2230,7 +2335,11 @@ if (typeof jQuery === 'undefined') {
     this.checkPosition()
   }
 
+<<<<<<< HEAD
   Affix.VERSION  = '3.3.6'
+=======
+  Affix.VERSION  = '3.3.5'
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
   Affix.RESET    = 'affix affix-top affix-bottom'
 
@@ -11595,5 +11704,8 @@ function fetchAvatar() {
 }
 
 },{"bootstrap":1,"jquery":2}]},{},[3]);
+<<<<<<< HEAD
 
 //# sourceMappingURL=app.js.map
+=======
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8

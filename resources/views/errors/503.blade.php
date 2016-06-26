@@ -3,7 +3,11 @@
     <head>
         <title>Be right back.</title>
 
+<<<<<<< HEAD
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+=======
+        <link href="//fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
         <style>
             html, body {

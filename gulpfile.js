@@ -1,5 +1,9 @@
 var elixir      = require('laravel-elixir');
 var gulp        = require('gulp');
+<<<<<<< HEAD
+=======
+var BrowserSync = require('laravel-elixir-browser-sync');
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 
 require('laravel-elixir-imagemin');
 
@@ -22,5 +26,16 @@ elixir(function(mix) {
        .copy(
             'node_modules/bootstrap-sass/assets/fonts/bootstrap',
             'public/fonts/bootstrap'
+<<<<<<< HEAD
         );
+=======
+        )
+       .browserSync([
+           'app/**/*',
+           'public/**/*',
+           'resources/**/*'
+       ], {
+           proxy: 'phpdublin.local'
+       });
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
 });

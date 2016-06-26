@@ -24,11 +24,16 @@ return [
     ],
 
     'ses' => [
+<<<<<<< HEAD
         'key' => env('SES_KEY'),
+=======
+        'key'    => env('SES_KEY'),
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
         'secret' => env('SES_SECRET'),
         'region' => 'us-east-1',
     ],
 
+<<<<<<< HEAD
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
@@ -36,6 +41,11 @@ return [
     'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
+=======
+    'stripe' => [
+        'model'  => App\User::class,
+        'key'    => env('STRIPE_KEY'),
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
         'secret' => env('STRIPE_SECRET'),
     ],
 

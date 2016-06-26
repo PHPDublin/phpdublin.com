@@ -1,0 +1,28 @@
+{
+    "title": "PHP Dublin — September 2015",
+    "author": "micflan",
+    "date": "2015-09-26",
+
+    "time": "September 22nd 2015 7:00pm",
+    "place": "Kitman Labs Ltd, Block B, Joyce's Court, Joyce's Walk, Talbot Street, Dublin",
+    "map_link": "http://maps.google.com/maps?f=q&hl=en&q=Block+B%2C+Joyce%E2%80%99s+Court%2C+Joyce%E2%80%99s+Walk%2C+Talbot+Street%2C+Dublin%2C+ie",
+    "meetup_link": "http://www.meetup.com/PHP-Dublin/events/225356604/",
+
+    "sponsors": [
+        {
+            "name": "Kitman Labs",
+            "image": "/img/sponsor-kitman.png",
+            "link": "http://kitmanlabs.com/"
+        },
+        {
+            "name": "Hostelworld",
+            "image": "/img/sponsor-hostelworld.png",
+            "link": "http://hostelworld.com/"
+        },
+        {
+            "name": "StatCounter",
+            "image": "/img/sponsor-statcounter.png",
+            "link": "http://statcounter.com/"
+        }
+    ]
+}

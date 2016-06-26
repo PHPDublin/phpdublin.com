@@ -227,6 +227,7 @@ body {
         border-radius: 500px;
         height: 180px;
         background-position: center center;
+<<<<<<< HEAD
         background-size: 100%;
         border-radius: 0;
         background-color: transparent;
@@ -239,11 +240,25 @@ body {
         text-indent: 0;
         display: block;
         width: 167px;
+=======
+        background-color: #54b5f1;
+        background-size: 100%;
+    }
+
+    .navbar-default .byline {
+        top: 125px;
+        text-indent: 0;
+        display: block;
+        width: 139px;
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
         margin: 0 38px;
         text-align: center;
         padding-bottom: 10px;
         color: #222;
+<<<<<<< HEAD
         background-color: transparent;
         transform: rotate(-23deg) scale(1.4);
+=======
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
     }
 }

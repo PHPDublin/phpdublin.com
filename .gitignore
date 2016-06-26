@@ -1,6 +1,21 @@
+<<<<<<< HEAD
 /vendor
 /node_modules
 /public/storage
 Homestead.yaml
 Homestead.json
 .env
+=======
+.idea
+*.iml
+out
+gen
+
+/nbproject/private/
+/workbench
+/vendor/*
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8

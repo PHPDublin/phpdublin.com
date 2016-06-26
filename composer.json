@@ -1,20 +1,38 @@
 {
+<<<<<<< HEAD
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
+=======
+    "name": "phpdublin/phpdublin",
+    "description": "PHP Dublin website",
+    "keywords": ["php", "dublin"],
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
     "license": "MIT",
     "type": "project",
     "require": {
         "php": ">=5.5.9",
+<<<<<<< HEAD
         "laravel/framework": "5.2.*",
         "dms/meetup-api-client": "^2.1"
+=======
+        "laravel/framework": "5.1.*",
+        "league/commonmark": "^0.10.0",
+        "league/flysystem": "^1.0",
+        "ramsey/uuid": "~2.8",
+        "nesbot/carbon": "~1.14"
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
+<<<<<<< HEAD
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*"
+=======
+        "phpspec/phpspec": "~2.1"
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
     },
     "autoload": {
         "classmap": [
@@ -27,6 +45,7 @@
     "autoload-dev": {
         "classmap": [
             "tests/TestCase.php"
+<<<<<<< HEAD
         ]
     },
     "scripts": {
@@ -43,6 +62,29 @@
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
+=======
+        ],
+        "psr-4": {
+            "PhpDublin\\AppTest\\": "tests/app/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "pre-update-cmd": [
+            "php artisan clear-compiled"
+        ],
+        "post-update-cmd": [
+            "php artisan optimize"
+        ],
+        "post-root-package-install": [
+            "php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+>>>>>>> b42fe0a4023e6bfa51529d0b73428b5c4d70e5e8
         ]
     },
     "config": {
