@@ -35,18 +35,17 @@
           <a class="navbar-brand" href="#">PHPDublin</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Meetup</a></li>
-            <li><a href="#">Blog</a></li>
-
-            <li><a href="#">Code of Conduct</a></li>
-            <li><a href="#">Contact</a></li>
+        <ul class="nav navbar-nav">
+            <li class="{{ $activePage === 'meetup' ? 'active' : 'inactive' }}"><a href="/">Meetup</a></li>
+            <li class="{{ $activePage === 'code-of-conduct' ? 'active' : 'inactive' }}"><a href="/code-of-conduct">Code of Conduct</a></li>
+            <li class="{{ $activePage === 'meetup' ? 'contact' : 'inactive' }}"><a href="/contact-us">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right social-icons">
             <li class="github"><a href="https://github.com/phpdublin" title="Checkout our GitHub repos">Github</a></li>
             <li class="twitter"><a href="https://twitter.com/phpdublin" title="Follow us on Twitter"">Twitter</a></li>
           </ul>
         </div><!--/.nav-collapse -->
+        <div class="byline">Dublin</div>
       </div>
     </nav>
 
