@@ -15,6 +15,10 @@ Route::get('/'                , ['as' => 'home'                 , 'uses' => 'Mee
 Route::get('/code-of-conduct' , ['as' => 'page.code-of-conduct' , 'uses' => 'SiteController@code_of_conduct']);
 Route::get('/contact-us'      , ['as' => 'page.contact-us'      , 'uses' => 'SiteController@contact_us']);
 
+Route::get('/contact', function() {
+    return redirect('/contact-us', 301);
+});
+
 Route::group(['prefix' => 'blog'], function() {
     Route::get('/'            , ['as' => 'blog.index' , 'uses' => 'BlogController@index']);
     Route::get('{id}' , ['as' => 'blog.show'  , 'uses' => 'BlogController@show']);
