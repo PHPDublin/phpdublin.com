@@ -1,0 +1,244 @@
+@import 'bootstrap_variables.scss';
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+body {
+    background: white;
+}
+
+.well {
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.avatar-link {
+    width: 60px;
+    height: 60px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 5px 5px 0;
+    border-radius: 10px;
+    display: inline-block;
+    text-indent: -99999px;
+    border: 1px solid $blue;
+}
+
+.navbar-default {
+    border: 0;
+    position: relative;
+    z-index: 9;
+    border-radius: 0;
+
+    >.container {
+        .navbar-brand {
+            text-indent: -99999px;
+            background: transparent url("/images/logo.png") center -5px no-repeat;
+            padding: 0;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-size: 100px;
+            position: absolute;
+        }
+
+        #navbar {
+            margin-left: 100px;
+        }
+
+        .navbar-nav {
+            li {
+                &.active {
+                    a {
+                        border-bottom-left-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+                }
+            }
+
+            &.social-icons {
+                li {
+                    a {
+                        width: 32px;
+                        height: 32px;
+                        display: inline-block;
+                        text-indent: -9999px;
+                        margin: 15px 20px 0 0;
+                        padding: 0;
+                    }
+                }
+
+                .github {
+                    a {
+                        background: transparent url('/images/github128.png') no-repeat center center;
+                        background-size: cover;
+                    }
+                }
+
+                .twitter {
+                    a {
+                        background: transparent url('/images/twitter128.png') no-repeat center center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .byline {
+        position: absolute;
+        text-indent: 80px;
+        font-weight: bolder;
+        font-style: italic;
+        // color: darken($navbar-default-bg, 6.5%);
+        color: white;
+        font-size: 15px;
+        padding-top: 3px;
+    }
+}
+
+.item {
+    &:not(:last-child) {
+        border-bottom: 3px solid $blue;
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+    }
+
+    .side {
+        padding: 40px 0;
+        text-align: center;
+        line-height: 2em;
+
+        a {
+            display: block;
+        }
+        .github-avatar {
+            max-width: 70px;
+            display: block;
+            margin: auto;
+        }
+    }
+
+    h2 {
+        a {
+            display: block;
+        }
+    }
+}
+
+.page-content {
+    background: white;
+    margin: 5px 0;
+    padding: 10px 30px 30px;
+}
+
+.sponsor {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.page-left {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $link-color;
+        }
+    }
+
+    .nav a:hover {
+        color: inherit;
+    }
+
+
+    h1 {
+        font-size: 24px;
+        margin: 20px 0 10px;
+    }
+
+    .item {
+        border-color: lighten($blue, 30%);
+
+        .side {
+            width: 100%;
+            line-height: normal;
+            text-align: left;
+            padding: 0 16px;
+            img {
+                display: none !important;
+            }
+        }
+
+        .main-content {
+            width: 100%;
+
+            p {
+                display: none;
+            }
+
+            .read-more {
+                display: none;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: large;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .page-left {
+        top: 88px;
+    }
+
+    #navbar {
+        position: relative;
+        .navbar-nav:not(.navbar-right) {
+            margin-left: 150px;
+            margin-top: 10px;
+        }
+    }
+
+    .navbar-default > .container .navbar-nav li.active a {
+        border-radius: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .navbar-nav li a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media(min-width: 992px) {
+    .navbar-default > .container .navbar-brand {
+        position: absolute;
+        width: 180px;
+        border: 0px solid #13242F;
+        margin: 20px 30px;
+        border-radius: 500px;
+        height: 180px;
+        background-position: center center;
+        background-color: #54b5f1;
+        background-size: 100%;
+    }
+
+    .navbar-default .byline {
+        top: 125px;
+        text-indent: 0;
+        display: block;
+        width: 139px;
+        margin: 0 38px;
+        text-align: center;
+        padding-bottom: 10px;
+        color: #222;
+    }
+}
