@@ -38,7 +38,7 @@
         <ul class="nav navbar-nav">
             <li class="{{ $activePage === 'meetup' ? 'active' : 'inactive' }}"><a href="/">Meetup</a></li>
             <li class="{{ $activePage === 'code-of-conduct' ? 'active' : 'inactive' }}"><a href="/code-of-conduct">Code of Conduct</a></li>
-            <li class="{{ $activePage === 'meetup' ? 'contact' : 'inactive' }}"><a href="/contact-us">Contact</a></li>
+            <li class="{{ $activePage === 'contact' ? 'active' : 'inactive' }}"><a href="/contact">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right social-icons">
             <li class="github"><a href="https://github.com/phpdublin" title="Checkout our GitHub repos">Github</a></li>

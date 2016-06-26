@@ -12,3 +12,15 @@
 */
 
 Route::get('/', ['uses' => 'MeetupController@index']);
+
+Route::get('contact', function() {
+    return view('pages/contact')->with([
+        'activePage' => 'contact',
+    ]);
+});
+
+Route::get('code-of-conduct', function() {
+    return view('pages/code-of-conduct')->with([
+        'activePage' => 'code-of-conduct',
+    ]);
+});
