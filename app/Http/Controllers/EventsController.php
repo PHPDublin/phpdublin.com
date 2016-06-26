@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Meetup;
 
-class MeetupController extends Controller
+class EventsController extends Controller
 {
     protected $meetupClient;
 
     public function __construct(Meetup $meetup)
     {
-        $this->meetup = $meetup;
+        $this->meetupClient = $meetup;
 
         parent::__construct();
     }
@@ -26,9 +26,9 @@ class MeetupController extends Controller
     {
         $previousPage = $request->input('past-page');
 
-        $this->data['previous'] = $this->meetup->past()->forPage($previousPage, 3)->reverse();
-        $this->data['upcoming'] = $this->meetup->upcoming();
-        $this->data['activePage'] = 'meetup';
+        $this->data['previous'] = $this->meetupClient->pastEvents()->forPage($previousPage, 3)->reverse();
+        $this->data['upcoming'] = $this->meetupClient->upcomingEvents();
+        $this->data['activePage'] = 'events';
 
         return view('welcome')->with($this->data);
     }

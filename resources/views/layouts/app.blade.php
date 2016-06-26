@@ -36,7 +36,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-            <li class="{{ $activePage === 'meetup' ? 'active' : 'inactive' }}"><a href="/">Meetup</a></li>
+            <li class="{{ $activePage === 'events' ? 'active' : 'inactive' }}"><a href="/">Events</a></li>
             <li class="{{ $activePage === 'code-of-conduct' ? 'active' : 'inactive' }}"><a href="/code-of-conduct">Code of Conduct</a></li>
             <li class="{{ $activePage === 'contact' ? 'active' : 'inactive' }}"><a href="/contact">Contact</a></li>
           </ul>

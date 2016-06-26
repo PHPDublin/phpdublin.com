@@ -49,7 +49,7 @@ class Meetup
         });
     }
 
-    public function upcoming()
+    public function upcomingEvents()
     {
         $response = $this->request('GetGroupEvents', [
             'status' => 'upcoming'
@@ -58,7 +58,7 @@ class Meetup
         return MeetupEvent::createFromApiSingleResultResponse($response);
     }
 
-    public function past()
+    public function pastEvents()
     {
         $response = $this->request('GetGroupEvents', [
             'status' => 'past'
@@ -67,7 +67,7 @@ class Meetup
         return MeetupEvent::createFromApiSingleResultResponse($response);
     }
 
-    public function all()
+    public function allEvents()
     {
         $response = $this->request('GetGroupEvents', [
             'status' => 'upcoming,past'

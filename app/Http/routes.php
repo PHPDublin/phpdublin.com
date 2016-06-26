@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', ['uses' => 'MeetupController@index']);
+Route::get('/', ['uses' => 'EventsController@index']);
 
 Route::get('contact', function() {
     return view('pages/contact')->with([
