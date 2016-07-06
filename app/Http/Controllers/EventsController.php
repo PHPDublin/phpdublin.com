@@ -26,7 +26,7 @@ class EventsController extends Controller
     {
         $previousPage = $request->input('past-page');
 
-        $this->data['previous'] = $this->meetupClient->pastEvents()->forPage($previousPage, 3)->reverse();
+        $this->data['previous'] = $this->meetupClient->pastEvents()->forPage($previousPage, 5)->reverse();
         $this->data['upcoming'] = $this->meetupClient->upcomingEvents();
         $this->data['activePage'] = 'events';
 

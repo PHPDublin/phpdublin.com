@@ -2,16 +2,19 @@
 
 @section('content')
 
-    <div class="row">
-        <div class="col-sm-3 page-left">
-        </div>
-        <div class="col-sm-9 page-content">
+    <section class="contentWrap pageHeader">
+        <header>
             <h1>Code of Conduct</h1>
             <h2>The Quick Version</h2>
             <p>PHPDublin is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion.</p>
             <p>We do not tolerate harassment of community members or participants in any form.</p>
+        </header>
+    </section>
 
+    <section class="contentWrap">
+        <header>
             <h2>The Less Quick Version</h2>
+        </header>
             <p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
             <p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>
             <p>Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. </p>
@@ -23,7 +26,6 @@
                 <li>Barry O'Sullivan (<a href="http://twitter.com/barryosull">@barryosull</a>)</li>
             </ul>
             <p>We expect participants to follow these rules at conference, workshop and meetup venues, community-related social events and social media.</p>
-        </div>
-    </div>
+    </section>
 
 @endsection
